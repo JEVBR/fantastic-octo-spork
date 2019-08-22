@@ -39,9 +39,12 @@ typedef struct dataStreamTyp {
 	volatile int slipSpeedRPM;
 	volatile int electricalSpeedRPM;
 	volatile int mechanicalSpeedRPM;
+	volatile int SingleScanInterval;
+	volatile int timeOfLastScan;
 } dataStream;
 
-void InitUART2();
+void InitUART1();
+//void InitUART2();
 int TransmitReady();
 int TransmitReadyAlt();
 void SendCharacter(char ch);
